@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib.css">
+    <link rel="stylesheet" href="./acc.html">
+    <style>
+        #account {
+            position: fixed;
+            top: 200px;
+            left: 50%;
+            padding: 70px;
+            transform: translateX(-50%);
+            background-color: rgb(51, 51, 51);
+            display: none;
+        }
+        
+        #account h1 {
+            margin-bottom: 20px;
+        }
+        
+        #account input {
+            margin-bottom: 10px;
+        }
+        
+        #account form {
+            margin-bottom: 20px;
+        }
+        
+        #account span {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        #exit a {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <nav class="navbar">
+        <div>
+            <ul class="navbar_ul1">
+                <li><a class="ah" href="./store.html">store</a></li>
+                <li class="menu_link">
+                    <a class="ah" href="./coll1.html">collection</a>
+                    <ul class="sub_navbar">
+                        <li><a class="ah" href="./coll1.html">001</a></li>
+                        <li><a class="ah" href="./coll2.html">002</a></li>
+                        <li><a class="ah" href="./coll3.html">003</a></li>
+                    </ul>
+                </li>
+                <li><a class="ah" href="./lib.html">Library</a></li>
+            </ul>
+        </div>
+        <div class="navbar_home"><a class="ah" href="#">Deja Vu</a></div>
+        <div>
+            <ul class="navbar_ul2">
+                <li><a class="ah" href="./care.html">custome care</a></li>
+                <li><a class="ah" href="#" onclick="account()">Account</a></p>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+
+    </div>
+    <div class="audio_p">
+        <button type="text" id="playButton">Play</button>
+        <audio id="mySong">
+            <source src="./audio/Yoru-Ni-Kakeru-YOASOBI.mp3" type="audio/mp3">
+        </audio>
+
+    </div>
+
+
+</body>
+<script src="./typed.js"></script>
+<script src="./index.js"></script>
+<script src="./lib.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+    $document.ready(function(){
+        $('sub_navbar').parent('li').addClass('has-child');
+    });
+</script>
+<script>
+    function account() {
+        document.getElementById("account").style.display = 'block';
+        document.getElementById("body").style.backgroundColor = 'rgba(180, 169, 169, 0.795)'
+
+    }
+
+    function exit() {
+        document.getElementById("exit").style.display = 'none'
+    };
+</script>
+
+</html>
